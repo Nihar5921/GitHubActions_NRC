@@ -29,4 +29,8 @@ jobs:
       run: |
          cd DotNet
          dotnet test
+    - name: DotNet Publish
+      run: |
+         cd DotNet
+         dotnet publish
       
