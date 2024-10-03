@@ -20,5 +20,11 @@ jobs:
     - name: Restore dependencies
       run: |
           cd DotNet
-          dotnet restore 
+          dotnet restore
+    - name: DotNet Build
+      run: |
+         cd DotNet
+         dotnet build
+    - name: DotNet test
+      run: dotnet test
       
