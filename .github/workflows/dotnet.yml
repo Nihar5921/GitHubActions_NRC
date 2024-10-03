@@ -19,6 +19,6 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: |
-          cd Dotnet
+          cd DotNet
           dotnet restore 
       
