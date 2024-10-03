@@ -26,5 +26,7 @@ jobs:
          cd DotNet
          dotnet build
     - name: DotNet test
-      run: dotnet test
+      run: |
+         cd DotNet
+         dotnet test
       
