@@ -14,9 +14,11 @@ jobs:
        run: |
           cd WebApplication1
           docker build -t nihar15759\docker_github:latest -f Dockerfile .
-     
-     - name: Docker Hub Login
-       run: docker login -u nihar15759 -p {{ secrets.Docker_Password }}
+          
+     - uses: docker/login-action@v3
+       with:
+          username: nihar15759
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
        
   
    
