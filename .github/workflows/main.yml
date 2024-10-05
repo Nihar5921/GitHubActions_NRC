@@ -1,0 +1,23 @@
+name: Dotnet_docker
+
+on:
+ workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+     - uses: actions/checkout@v4  
+
+     - name: Docker Build
+       run: |
+          cd WebApplication1
+          docker build -t nihar15759\docker_github:latest
+     
+     - name: Docker Hub Login
+       run: docker login -u nihar15759 -p {{ secrets.Docker_Password }}
+       
+  
+   
+   
