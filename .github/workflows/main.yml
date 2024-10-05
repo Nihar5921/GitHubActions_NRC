@@ -13,7 +13,7 @@ jobs:
      - name: Docker Build
        run: |
           cd WebApplication1
-          docker build -t nihar15759\docker_github:latest
+          docker build -t nihar15759\docker_github:latest -f Dockerfile .
      
      - name: Docker Hub Login
        run: docker login -u nihar15759 -p {{ secrets.Docker_Password }}
