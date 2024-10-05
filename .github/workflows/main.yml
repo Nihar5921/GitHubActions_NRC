@@ -18,7 +18,7 @@ jobs:
      - name: Build the Docker image
        run: |
           cd WebApplication1 
-          docker build -t nihar15759/dockertest_github:latest -f Dockerfile .
+          docker build -t nihar15759/dotnet-github:latest -f Dockerfile .
 
      - name: Push the Docker image
        run: |
