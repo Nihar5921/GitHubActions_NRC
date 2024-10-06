@@ -45,14 +45,10 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
+          context: ./WebApplication1
+          file: ./WebApplication1/Dockerfile
           push: true
-          tags: nihar15759/docker-test:latest
-         
-      #with:
-          #context: .
-          #file: ./WebApplication1/Dockerfile
-          #push: true
-          #tags: ${{ steps.meta.outputs.tags }}
-          #labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
      
