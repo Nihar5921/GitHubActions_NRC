@@ -10,11 +10,11 @@ jobs:
         run:
           working-directory: ./WebApplication1
 
-  steps:
-   - uses: actions/checkout@v4
+     steps:
+      - uses: actions/checkout@v4
 
-   - name: docker build
-     run: pwd
+      - name: docker build
+        run: pwd
    
       
      
