@@ -45,7 +45,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
-          context: ./WebApplication1
+          context: ./WebApplication1/
           file: ./WebApplication1/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
