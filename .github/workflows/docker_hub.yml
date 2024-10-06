@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  build:
+  check:
      runs-on: ubuntu-latest
      defaults:
         run:
@@ -17,6 +17,16 @@ jobs:
         run: |
            pwd
            ls -lrth
-   
-      
+
+  Build:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+          working-directory: ./WebApplication1
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: docker build
+      run: docker build -t nihar15759/dockertest:latest .
      
