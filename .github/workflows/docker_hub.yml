@@ -1,7 +1,7 @@
 name: docker-github
 
 on:
-  push:
+  workflow_dispatch
 
 jobs:
   check:
