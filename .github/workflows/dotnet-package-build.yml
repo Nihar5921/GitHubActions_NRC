@@ -21,13 +21,13 @@ jobs:
             cd WebApplication1
             dotnet restore
 
-       - name: dotnet publish
-         run: |
-            cd WebApplication1
-            dotnet publish -c release -o ./github_output
-
        - name: dotnet build
          run: |
             cd WebApplication1
             dotnet build
-            
+
+       
+       - name: dotnet publish
+         run: |
+            cd WebApplication1
+            dotnet publish -c release -o ./github_output
