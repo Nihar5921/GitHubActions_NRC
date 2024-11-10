@@ -31,3 +31,8 @@ jobs:
          run: |
             cd WebApplication1
             dotnet publish -c release -o ./github_output
+
+       - uses: actions/upload-artifact@v4
+         with:
+            name: upload-artifact
+            path: ./github_output
