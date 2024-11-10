@@ -1,0 +1,28 @@
+name: Dotnet-Publish
+
+on:
+ workflow_dispatch
+
+jobs:
+  dotnetbuild:
+     runs-on:
+        ubuntu-latest
+
+     steps:
+       - uses: actions/checkout@v4
+
+       - name: DotNet Setup 
+         uses: actions/setup-dotnet@v4
+         with:
+              dotnet-version: '3.1.x'
+
+       - name: dotnet restore
+         run:
+            cd WebApplication1
+            dotnet restore
+
+       - name: dotnet build
+         run:
+            cd WebApplication1
+            dotnet build
+            
