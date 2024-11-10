@@ -1,7 +1,7 @@
 name: Dotnet-Publish
 
 on:
- workflow_dispatch
+ push
 
 jobs:
   dotnetbuild:
@@ -17,12 +17,12 @@ jobs:
               dotnet-version: '3.1.x'
 
        - name: dotnet restore
-         run:
+         run: |
             cd WebApplication1
             dotnet restore
 
        - name: dotnet build
-         run:
+         run: |
             cd WebApplication1
             dotnet build
             
