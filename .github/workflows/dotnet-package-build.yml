@@ -39,5 +39,5 @@ jobs:
 
        - uses: actions/download-artifact@v4
          with:
-              name: my-artifact
+              name: upload-artifact
               path: .
