@@ -36,3 +36,8 @@ jobs:
          with:
             name: upload-artifact
             path: ./WebApplication1/github_output
+
+       - uses: actions/download-artifact@v4
+         with:
+              name: my-artifact
+              path: .
