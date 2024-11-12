@@ -1,13 +1,13 @@
 name: Dotnet-Publish
 
 on:
- push
+ workflow_dispatch
 
 concurrency:
   group: build-and-test
 
 jobs:
-  build-and-test-pr1:
+  build-and-test:
      runs-on:
         ubuntu-latest
 
