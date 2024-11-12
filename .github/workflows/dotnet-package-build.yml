@@ -3,6 +3,9 @@ name: Dotnet-Publish
 on:
  push
 
+concurrency:
+  group: build-and-test
+
 jobs:
   dotnetbuild:
      runs-on:
