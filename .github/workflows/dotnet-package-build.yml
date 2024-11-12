@@ -8,13 +8,13 @@ concurrency:
      cancel-in-progress: false
 
 jobs:
-  deploy:
-    concurrency: 
-      group: ${{ github.repository }}-concurrency-group
-      cancel-in-progress: false
-    runs-on: ubuntu-latest  
+ con-deploy:
+  concurrency: 
+         group: ${{ github.repository }}-concurrency-for-group
+         cancel-in-progress: false
+  runs-on: ubuntu-latest  
 
-    steps:
+  steps:
        - uses: actions/checkout@v4
 
        - name: DotNet Setup 
