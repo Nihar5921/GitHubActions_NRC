@@ -9,12 +9,12 @@ concurrency:
 
 jobs:
   deploy:
-   concurrency: 
-     group: ${{ github.repository }}-concurrency-for-workflow
-     cancel-in-progress: false
-   runs-on: ubuntu-latest
+    concurrency: 
+       group: ${{ github.repository }}-concurrency-for-workflow
+       cancel-in-progress: false
+    runs-on: ubuntu-latest
 
-   steps:
+    steps:
        - uses: actions/checkout@v4
 
        - name: DotNet Setup 
