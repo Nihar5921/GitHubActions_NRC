@@ -4,15 +4,14 @@ on:
  workflow_dispatch
 
 concurrency:
-  group: ${{ github.repository }}-concurrency-for-workflow
-  cancel-in-progress: false
+     group: ${{ github.repository }}-concurrency-group
+     cancel-in-progress: false
 
 jobs:
   deploy:
-    concurrency:
-      group: ${{ github.repository }}-concurrency-for-job
-      cancel-in-progress: false
-    runs-on: ubuntu-latest
+    concurrency: 
+      group: ${{ github.repository }}-concurrency-group
+    runs-on: ubuntu-latest  
 
     steps:
        - uses: actions/checkout@v4
