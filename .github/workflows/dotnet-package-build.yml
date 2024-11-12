@@ -4,15 +4,16 @@ on:
  workflow_dispatch
 
 concurrency:
-  group: build-and-test
-  cancel-in-progress: true
+     group: ${{ github.repository }}-concurrency-for-workflow
+     cancel-in-progress: true
 
 jobs:
   deploy:
-     runs-on:
-        ubuntu-latest
+   concurrency: 
+     group: ${{ github.repository }}-concurrency-for-workflow
+   runs-on: ubuntu-latest
 
-     steps:
+   steps:
        - uses: actions/checkout@v4
 
        - name: DotNet Setup 
