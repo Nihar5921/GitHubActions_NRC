@@ -1,17 +1,17 @@
 name: Dotnet-Publish
 
 concurrency:
-     group: ${{ github.repository }}-concurrency-for-workflow
-     cancel-in-progress: false
+  group: ${{ github.repository }}-concurrency-for-workflow
+  cancel-in-progress: false
      
 on:
  workflow_dispatch
 
 jobs:
   deploy:
-    concurrency: 
-       group: ${{ github.repository }}-concurrency-for-workflow
-       cancel-in-progress: false
+    concurrency:
+      group: ${{ github.repository }}-concurrency-for-job
+      cancel-in-progress: false
     runs-on: ubuntu-latest
 
     steps:
