@@ -1,0 +1,16 @@
+name: testing-conditionals
+
+on:
+  push
+
+env:
+  myvalue: ${{ github.ref == 'refs/heads/main' && 'mainbracnh' || 'testbranch' }}
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test
+        run: |
+          echo ${{ env.myvalue }}
