@@ -4,7 +4,7 @@ on:
   push
 
 env:
-  myvalue: ${{ github.ref == 'refs/heads/main' && 'mainbracnh' || 'testbranch' }}
+  myvalue: ${{ github.ref == 'refs/heads/dotnet_github' && 'workingdir' || 'testbranch' }}
 
 jobs:
   job:
