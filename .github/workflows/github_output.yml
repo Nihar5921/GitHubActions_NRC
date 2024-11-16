@@ -11,7 +11,7 @@ jobs:
    steps:
       - name: Generate_output
         id: step1
-        run: echo "value=dummy" >> GITHUB_OUTPUT
+        run: echo "value=dummy" >> $GITHUB_OUTPUT
 
  job2:
     runs-on: ubuntu-latest
