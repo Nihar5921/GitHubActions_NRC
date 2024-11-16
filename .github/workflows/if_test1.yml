@@ -5,7 +5,7 @@ on:
 
 jobs:
   run: 
-   #if: contains('github.ref','dotnet_github')
+   if: contains(github.ref,'refs/heads')
    runs-on: ubuntu-latest
 
    steps:
