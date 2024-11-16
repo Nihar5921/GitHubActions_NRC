@@ -1,7 +1,7 @@
 name: github_output
 
 on:
- push
+ workflow_dispatch
 
 jobs:
  job1:
