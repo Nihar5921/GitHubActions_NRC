@@ -1,0 +1,17 @@
+name: if_test1
+
+on:
+  push
+
+jobs:
+  run: 
+   if: startsWith('github.ref','dotnet_github')
+   runs-on: ubuntu-latest
+
+   steps:
+    - name: testing
+      run: echo "this is working"
+
+  
+    
+    
