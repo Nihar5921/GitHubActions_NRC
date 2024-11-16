@@ -1,0 +1,25 @@
+name: github_output
+
+on:
+ push
+
+jobs:
+ job1:
+   needs: job2
+   runs-on: ubuntu-latest
+   outputs: ${{ steps.step1.outputs.value }}
+   steps:
+      - name: Generate_output
+        id: step1
+        run: echo "value={This is test value}" >> GITHUB_OUTPUT
+
+ job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: Display
+        run: echo ${{ needs.job1.outputs.value }}
+
+         
+     
+    
