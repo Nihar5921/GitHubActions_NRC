@@ -5,12 +5,12 @@ on:
 
 jobs:
   run: 
-   if: contains('github.ref','dotnet_github')
+   #if: contains('github.ref','dotnet_github')
    runs-on: ubuntu-latest
 
    steps:
     - name: testing
-      run: echo "this is working"
+      run: echo "github.ref"
 
   
     
