@@ -1,7 +1,8 @@
 name: github_output
 
 on:
-  push
+  pull_request:
+    
 
 jobs:
   job1:
