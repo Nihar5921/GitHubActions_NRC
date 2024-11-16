@@ -1,0 +1,24 @@
+name: github_output
+
+on:
+  push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      value: ${{ steps.step1.outputs.value }}
+    steps:
+      - name: Generate output
+        id: step1
+        run: echo "value=dummy" >> $GITHUB_ENV
+      - name: Set output
+        id: set_output
+        run: echo "::set-output name=value::$(grep '^value=' $GITHUB_ENV | cut -d '=' -f2-)"
+  
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: Display
+        run: echo ${{ needs.job1.outputs.value }}
