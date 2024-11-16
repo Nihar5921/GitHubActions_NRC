@@ -1,7 +1,7 @@
 name: testing-conditionals
 
 on:
-  push
+  workflow_dispatch
 
 env:
   myvalue: ${{ github.ref == 'refs/heads/dotnet_github' && 'workingdir' || 'testbranch' }}
