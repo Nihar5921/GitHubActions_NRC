@@ -28,5 +28,4 @@ jobs:
 
       - run: echo ${{ env.test_value }}
         id: test-output-generate
-      
      
