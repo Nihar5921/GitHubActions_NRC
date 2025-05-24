@@ -1,26 +1,32 @@
 name: input-develop
 
 on:
- push:
-   branches:
-     - Develop
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Choose the environment to deploy to'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+       
+# env:
+#   test_value: "somevalue"
 
-env:
-  test_value: "somevalue"
+# jobs:
+#  run-input:
+#     runs-on: [ubuntu-latest]
+#     defaults:
+#      run:
+#       shell: bash
+#       working-directory: ./src
 
-jobs:
-  run-input:
-    runs-on: [ubuntu-latest]
-    defaults:
-     run:
-      shell: bash
-      working-directory: ./src
+#     steps:
+#       - uses: actions/checkout@v4.2.2
+#         continue-on-error: true
 
-    steps:
-      - uses: actions/checkout@v4.2.2
-        continue-on-error: true
-
-      - run: echo ${{ env.test_value }}
-        id: test-output-generate
+#       - run: echo ${{ env.test_value }}
+#         id: test-output-generate
       
      
