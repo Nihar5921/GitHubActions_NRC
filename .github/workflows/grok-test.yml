@@ -1,0 +1,16 @@
+name: grok-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      targetEnv:
+        description: 'Select environment'
+        type: environment
+        required: true
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.targetEnv }}
+    steps:
+      - run: echo "Deploying to ${{ github.event.inputs.targetEnv }}"
