@@ -3,13 +3,11 @@ name: input-develop
 on:
   workflow_dispatch:
     inputs:
-       rest:
-        description: 'Choose the environment to deploy to'
+      appVersion:
+        description: 'Application version to deploy'
+        type: string
         required: true
-        type: choice
-        options:
-          - dev
-          - prod
+        default: '1.0.0'
        
 env:
   test_value: "somevalue"
