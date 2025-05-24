@@ -1,0 +1,20 @@
+name: input-develop
+
+on:
+ push:
+   branches:
+     - Develop
+
+env:
+  test_value: "somevalue"
+
+jobs:
+  run-input:
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - run: echo ${{ env.test_value }} 
+      
+     
