@@ -17,16 +17,16 @@ env:
 jobs:
  run-input:
     runs-on: [ubuntu-latest]
-#     defaults:
-#      run:
-#       shell: bash
-#       working-directory: ./src
+    defaults:
+     run:
+      shell: bash
+      working-directory: ./src
 
-#     steps:
-#       - uses: actions/checkout@v4.2.2
-#         continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4.2.2
+        continue-on-error: true
 
-#       - run: echo ${{ env.test_value }}
-#         id: test-output-generate
+      - run: echo ${{ env.test_value }}
+        id: test-output-generate
       
      
