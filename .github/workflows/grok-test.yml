@@ -3,10 +3,13 @@ name: grok-test
 on:
   workflow_dispatch:
     inputs:
-      targetEnv:
+      environent:
         description: 'Select environment'
-        type: environment
+        type: choice
         required: true
+        options:
+          - dev
+          - prod
   
 jobs:
   deploy:
