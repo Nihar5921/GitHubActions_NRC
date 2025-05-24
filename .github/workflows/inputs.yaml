@@ -3,7 +3,7 @@ name: input-develop
 on:
   workflow_dispatch:
     inputs:
-      environment:
+       rest:
         description: 'Choose the environment to deploy to'
         required: true
         type: choice
