@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
 
-      - run: echo ${{ env.test_value }} 
+      - run: echo ${{ env.test_value }}
+        id: test-output-generate
       
      
