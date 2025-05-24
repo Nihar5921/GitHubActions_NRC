@@ -3,7 +3,7 @@ name: input-develop
 on:
   workflow_dispatch:
     inputs:
-       environment:
+       rest:
         description: 'Choose the environment to deploy to'
         required: true
         type: choice
@@ -11,12 +11,12 @@ on:
           - dev
           - prod
        
-# env:
-#   test_value: "somevalue"
+env:
+  test_value: "somevalue"
 
-# jobs:
-#  run-input:
-#     runs-on: [ubuntu-latest]
+jobs:
+ run-input:
+    runs-on: [ubuntu-latest]
 #     defaults:
 #      run:
 #       shell: bash
